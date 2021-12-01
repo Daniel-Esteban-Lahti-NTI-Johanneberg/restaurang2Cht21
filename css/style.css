@@ -1,3 +1,63 @@
-body {
-  background:grey;
+body{
+    margin:0%;
+    overflow-x:hidden;
+}
+
+.mainContainer{
+    width:100vw;
+    height:200vh;
+
+    display:grid;
+    grid-template-rows:50% 12.5% auto;
+    grid-template-columns:100%;
+    grid-template-areas:
+    "tC"
+    "mC"
+    "bC"
+    ;
+
+    background-color:rgb(235, 196, 146);
+}
+
+.topContainer{
+    grid-area:tC;
+    grid-template-rows:100%;
+    grid-template-areas: 
+    "sM"
+    ;
+
+    background-image: url("../img/RestaurangLoggaText.png"), url("../img/RestaurantPic2.jpg");
+    background-size:contain, cover;
+    background-repeat:no-repeat, no-repeat;
+    background-position:center, center;
+}
+
+    .socialMedia{
+        grid-area:sM;
+    
+        background-color:rgba(0, 0, 0, 0.6);
+    }
+    .logoText{
+        grid-area:lT;
+
+        background-color:rgb(255, 255, 255);
+    }
+
+.midContainer{
+    grid-area:mC;
+    grid-template-areas:
+    "nM"
+    ;
+
+    background-color:rgb(48, 21, 21);
+}
+    .navMenu{
+        grid-area:nM;
+        grid-template-columns:
+        "meny omOss "
+        ;
+    }
+
+.botContainer{
+    grid-area:bC;
 }

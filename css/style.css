@@ -3,8 +3,21 @@ body{
     overflow-x:hidden;
 }
 
+#fixedTop{
+    position:fixed;
+    width:100%;
+    height:6%;
+
+    background-position:left, right;
+    background-repeat:no-repeat;
+    background-size:contain;
+
+    background-color:rgba(65, 105, 225, 0);
+    background-image:url("../img/RestaurangLogga.png"), url("../img/SocialaMedier.png"), linear-gradient(to bottom, rgb(19, 12, 12), rgba(0, 0, 0, 0));
+}
+
 .mainContainer{
-    width:100vw;
+    width:100%;
     height:200vh;
 
     display:grid;
@@ -16,48 +29,151 @@ body{
     "bC"
     ;
 
-    background-color:rgb(235, 196, 146);
+    background-image:linear-gradient(to bottom, rgb(19, 12, 12), rgb(19, 12, 12), rgb(49, 34, 34));
 }
 
 .topContainer{
     grid-area:tC;
-    grid-template-rows:100%;
-    grid-template-areas: 
-    "sM"
-    ;
 
     background-image: url("../img/RestaurangLoggaText.png"), url("../img/RestaurantPic2.jpg");
     background-size:contain, cover;
     background-repeat:no-repeat, no-repeat;
     background-position:center, center;
+    
+    /*display:grid;
+    grid-template-rows:10% 90%;
+    grid-template-areas: 
+    "sM"
+    "lT"
+    ;*/
 }
-
-    .socialMedia{
+    
+    /*.socialMedia{
         grid-area:sM;
     
-        background-color:rgba(0, 0, 0, 0.6);
+        background-color:rgba(0, 0, 0, 0.801);
+        background-image:url("../img/RestaurangLogga.png");
+        background-position:left;
+        background-repeat:no-repeat;
+        background-size:contain;
+        
     }
     .logoText{
         grid-area:lT;
 
         background-color:rgb(255, 255, 255);
-    }
+    }*/
 
 .midContainer{
     grid-area:mC;
-    grid-template-areas:
-    "nM"
-    ;
-
-    background-color:rgb(48, 21, 21);
+    background-color:rgb(19, 12, 12);
+    border-bottom:rgb(49, 34, 34) solid 10px;
+    box-shadow: 0 4px 80px 0 rgba(146, 49, 49, 0.699), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
     .navMenu{
         grid-area:nM;
-        grid-template-columns:
-        "meny omOss "
-        ;
+
+        display:flex;
+        flex-direction:row;
+        justify-content:space-evenly;
     }
+        .navButton{
+            display:flex;
+            padding:4rem;
+            align-items:center;
+
+            color:whitesmoke;
+            font-size:1rem;
+            text-decoration:none;
+
+            transition-duration:0.2s;
+        }
+        .navButton:hover{
+            color:#fb3b02;
+            font-size:1rem;
+            background-image:linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
+        }
 
 .botContainer{
     grid-area:bC;
+
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    
+    height:100%;
+
+    margin-right:15%;
+    margin-left:15%;
+}
+    #menyBakgrund{
+        background-image:linear-gradient(to bottom, #0a070636, rgb(19, 12, 12),rgb(19, 12, 12));
+        /*border-left:40px solid rgba(255, 255, 255, 0.521);
+        border-right:40px solid rgb(255, 255, 255, 0.521);*/
+    }
+    #menyHeader{
+        display:flex;
+        flex-basis:100%;
+        justify-content:center;
+        color:rgb(19, 12, 12);
+        /*color:#fb3b02;*/
+        color:whitesmoke;
+        font-size:200%;
+    }
+    #forratt{
+        flex-grow:1;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        margin-top:-50px;
+        margin-right:100px;
+        transition-duration:0.2s;
+    }      
+    #efteratt{
+        flex-grow:1;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        margin-top:-50px;
+        transition-duration:0.2s;
+    }
+
+p.white{  
+    font-family:monospace;
+    line-height:200%;
+    color:whitesmoke;
+}
+
+p.whiteArtikel{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:whitesmoke;
+}
+
+p.black{
+    font-family:monospace;
+    line-height:200%;
+    color:rgb(19, 12, 12);
+}
+
+header{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style:italic;
+    color:whitesmoke;
+}
+
+h2{
+    color:rgb(19, 12, 12);
+    color:#fb3b02;
+    color:whitesmoke;
+}
+
+#bodyS2{
+    background-image:linear-gradient(to bottom, rgb(19, 12, 12), rgb(19, 12, 12), rgb(49, 34, 34));
+}
+
+#bodyS3{
+    background-image:linear-gradient(to bottom, rgb(19, 12, 12), rgb(19, 12, 12), rgb(49, 34, 34));
 }
